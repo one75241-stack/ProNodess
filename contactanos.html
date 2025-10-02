@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - HUB de Emprendimiento</title>
+    <link rel="stylesheet" href="Css/styles.css">
+    <link rel="stylesheet" href="Css/contactanos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVXcRmiq1nxul5oAyTJK_vM8jeZq_cr5Y&callback=initMap" async defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <section id="main-header">
+    <div class="container">
+        <nav>
+            <a href="index.html">
+                <img src="ImagenesIndex/LogoUpa.png" class="logo" alt="Logo UPA">
+            </a>
+            <ul class="nav-list">
+                <li><a href="index2.html">INICIO</a></li>
+                <li><a href="capacitaciones.html">CAPACITACIONES</a></li>
+                <li><a href="empresasaliadas.html">EMPRESAS ALIADAS</a></li>
+                <li><a href="sobrenosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="contactanos.html" class="active">CONTÁCTANOS</a></li>
+                <li><button class="btn btn-secondary">LOGIN</button></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        <div class="header-content">
+            <h1 class="intro-heading">Contáctanos</h1>
+            <p class="main-description">Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo de expertos.</p>
+        </div>
+    </div>
+  </section>
+
+  <!-- Sección de Información de Contacto -->
+  <section class="contact-info">
+    <div class="container">
+      <div class="contact-header">
+        <span class="section-tag">CONTACTO</span>
+        <h2>Hablemos de Tu Proyecto</h2>
+        <p>Estamos listos para escucharte y ayudarte a llevar tu emprendimiento al siguiente nivel</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Tarjeta de Información -->
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-content">
+              <h4>Nuestra Ubicación</h4>
+              <p>Av. Universidad 123, Col. Centro<br>Ciudad, Estado 12345</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="info-content">
+              <h4>Teléfonos</h4>
+              <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-content">
+              <h4>Correo Electrónico</h4>
+              <p>info@hubemprendimiento.edu<br>soporte@hubemprendimiento.edu</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="info-content">
+              <h4>Horario de Atención</h4>
+              <p>Lunes - Viernes: 9:00 - 18:00<br>Sábados: 9:00 - 14:00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mapa de Google -->
+        <div class="map-section">
+          <div class="map-container">
+            <div id="googleMap"></div>
+            <div class="map-controls">
+              <button class="map-btn" id="satelliteView">
+                <i class="fas fa-satellite"></i>
+                Vista Satélite
+              </button>
+              <button class="map-btn" id="streetView">
+                <i class="fas fa-road"></i>
+                Vista Callejera
+              </button>
+              <a href="https://www.google.com/maps?q=universidad+politécnica+de+atlautla" target="_blank" class="map-btn directions-btn">
+                <i class="fas fa-directions"></i>
+                Cómo Llegar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Formulario de Contacto -->
+  <section class="contact-form-section">
+    <div class="container">
+      <div class="form-container">
+        <div class="form-header">
+          <h2>Envíanos un Mensaje</h2>
+          <p>Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas</p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre Completo *</label>
+              <input type="text" id="name" name="name" required>
+              <i class="fas fa-user"></i>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo Electrónico *</label>
+              <input type="email" id="email" name="email" required>
+              <i class="fas fa-envelope"></i>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" name="phone">
+              <i class="fas fa-phone"></i>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Asunto *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Selecciona un asunto</option>
+                <option value="capacitacion">Información sobre Capacitaciones</option>
+                <option value="empresa">Empresas Aliadas</option>
+                <option value="soporte">Soporte Técnico</option>
+                <option value="general">Consulta General</option>
+                <option value="otro">Otro</option>
+              </select>
+              <i class="fas fa-tag"></i>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="message">Mensaje *</label>
+            <textarea id="message" name="message" rows="6" placeholder="Describe tu consulta o proyecto..." required></textarea>
+            <i class="fas fa-comment"></i>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              Enviar Mensaje
+            </button>
+            <button type="reset" class="btn btn-outline">
+              <i class="fas fa-redo"></i>
+              Limpiar Formulario
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Preguntas Frecuentes -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-header">
+        <span class="section-tag">AYUDA</span>
+        <h2>Preguntas Frecuentes</h2>
+        <p>Resolvemos tus dudas más comunes</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>¿Cómo puedo registrarme en las capacitaciones?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Puedes registrarte directamente desde nuestra página de capacitaciones seleccionando el curso de tu interés y completando el formulario de inscripción.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>¿Qué métodos de pago aceptan?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Aceptamos tarjetas de crédito/débito, transferencias bancarias y pagos en efectivo en nuestras instalaciones.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>¿Ofrecen certificados al terminar las capacitaciones?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Sí, todos nuestros cursos incluyen certificado de participación avalado por la institución.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>¿Puedo reprogramar mi capacitación?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Sí, contamos con políticas flexibles de reprogramación. Contáctanos para más detalles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <img src="ImagenesIndex/LogoUpa.png" class="footer-logo" alt="Logo UPA">
+                <p>Transformando ideas en negocios exitosos a través de la innovación y el emprendimiento.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index2.html">INICIO</a></li>
+                    <li><a href="capacitaciones.html">CAPACITACIONES</a></li>
+                    <li><a href="#">EMPRESAS ALIADAS</a></li>
+                    <li><a href="sobrenosotros.html">SOBRE NOSOTROS</a></li>
+                    <li><a href="contactanos.html">CONTÁCTANOS</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Universidad 123, Ciudad</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@hubemprendimiento.edu</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hub de Emprendimiento e Innovación. Todos los derechos reservados.</p>
+        </div>
+    </div>
+  </footer>
+
+  <script src="Js/contactanos.js"></script>
+</body>
+</html>

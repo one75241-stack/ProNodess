@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitaciones - HUB de Emprendimiento</title>
+    <link rel="stylesheet" href="Css/styles.css">
+    <link rel="stylesheet" href="Css/capacitaciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <section id="main-header">
+    <div class="container">
+        <nav>
+            <a href="index.html">
+                <img src="ImagenesIndex/LogoUpa.png" class="logo" alt="Logo UPA">
+            </a>
+            <ul class="nav-list">
+                <li><a href="index2.html">INICIO</a></li>
+                <li><a href="capacitaciones.html" class="active">CAPACITACIONES</a></li>
+                <li><a href="empresasaliadas.html">EMPRESAS ALIADAS</a></li>
+                <li><a href="sobrenosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="contactanos.html">CONTÁCTANOS</a></li>
+                <li><button class="btn btn-secondary">LOGIN</button></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <div class="header-content">
+            <h1 class="intro-heading">Nuestras Capacitaciones</h1>
+            <p class="main-description">Programas especializados diseñados para desarrollar tus habilidades emprendedoras y llevar tu negocio al siguiente nivel.</p>
+        </div>
+    </div>
+  </section>
+
+  <!-- Sección de Catálogo de Capacitaciones -->
+  <section id="catalog">
+    <div class="container">
+      <!-- Filtro Compacto -->
+      <div class="filters-section compact">
+        <div class="filters-header">
+          <h2>Encuentra tu Capacitación Ideal</h2>
+          <p>Filtra por diferentes categorías para encontrar el programa perfecto</p>
+        </div>
+        
+        <div class="filters-compact">
+          <div class="compact-filter">
+            <div class="filter-row">
+              <div class="filter-item">
+                <select id="level-filter" class="filter-select compact">
+                  <option value="all">Todos los niveles</option>
+                  <option value="basico">Básico</option>
+                  <option value="intermedio">Intermedio</option>
+                  <option value="avanzado">Avanzado</option>
+                </select>
+              </div>
+              
+              <div class="filter-item">
+                <select id="modality-filter" class="filter-select compact">
+                  <option value="all">Todas las modalidades</option>
+                  <option value="presencial">Presencial</option>
+                  <option value="virtual">Virtual</option>
+                  <option value="hibrido">Híbrido</option>
+                </select>
+              </div>
+              
+              <div class="filter-item">
+                <select id="duration-filter" class="filter-select compact">
+                  <option value="all">Todas las duraciones</option>
+                  <option value="corto">Corto (1-10 hrs)</option>
+                  <option value="medio">Medio (11-20 hrs)</option>
+                  <option value="largo">Largo (21+ hrs)</option>
+                </select>
+              </div>
+              
+              <div class="filter-item">
+                <select id="price-filter" class="filter-select compact">
+                  <option value="all">Todos los precios</option>
+                  <option value="gratuito">Gratuito</option>
+                  <option value="pago">-</option>
+                </select>
+              </div>
+              
+              <div class="filter-actions compact">
+                <button class="btn btn-primary btn-small" id="apply-filters">
+                  <i class="fas fa-filter"></i>
+                  Aplicar
+                </button>
+                <button class="btn btn-outline btn-small" id="clear-filters">
+                  <i class="fas fa-times"></i>
+                  Limpiar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filtros activos compactos -->
+        <div class="active-filters compact" id="active-filters">
+          <!-- Los filtros activos aparecerán aquí dinámicamente -->
+        </div>
+      </div>
+
+      <!-- Contador de resultados -->
+      <div class="results-info compact">
+        <span id="results-count">Mostrando 6 de 6 capacitaciones</span>
+      </div>
+
+      <!-- Grid de Capacitaciones -->
+      <div class="catalog-grid">
+        <!-- Capacitación 1 -->
+        <div class="course-card" data-level="basico" data-modality="virtual" data-duration="corto" data-price="gratuito">
+          <div class="course-image">
+            <img src="ImagenesIndex/capacitacion1.jpg" alt="Modelo de Negocio">
+            <span class="course-badge virtual">Virtual</span>
+            <span class="course-level basico">Básico</span>
+          </div>
+          <div class="course-content">
+            <h3>Modelo de Negocio Canvas</h3>
+            <p class="course-description">Aprende a diseñar y validar tu modelo de negocio utilizando la metodología Canvas.</p>
+            <div class="course-meta">
+              <div class="meta-item">
+                <i class="far fa-clock"></i>
+                <span>8 horas</span>
+              </div>
+              <div class="meta-item">
+                <i class="far fa-calendar"></i>
+                <span>Lunes y Miércoles</span>
+              </div>
+              <div class="meta-item">
+                <i class="far fa-user"></i>
+                <span>20 cupos</span>
+              </div>
+            </div>
+            <div class="course-price">
+              <span class="price">Gratuito</span>
+              <span class="original-price"></span>
+            </div>
+            <div class="course-details">
+              <h4>Lo que aprenderás:</h4>
+              <ul>
+                <li>Elementos clave del Business Model Canvas</li>
+                <li>Validación de propuesta de valor</li>
+                <li>Segmentación de clientes</li>
+                <li>Flujos de ingresos</li>
+              </ul>
+            </div>
+            <div class="course-actions">
+              <button class="btn btn-primary">Inscribirse</button>
+              <button class="btn btn-outline">Ver Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capacitación 2 -->
+        <div class="course-card" data-level="intermedio" data-modality="presencial" data-duration="medio" data-price="pago">
+          <div class="course-image">
+            <img src="ImagenesIndex/capacitacion2.jpg" alt="Finanzas para Emprendedores">
+            <span class="course-badge presencial">Presencial</span>
+            <span class="course-level intermedio">Intermedio</span>
+          </div>
+          <div class="course-content">
+            <h3>Finanzas para Emprendedores</h3>
+            <p class="course-description">Domina los conceptos financieros esenciales para gestionar tu emprendimiento.</p>
+            <div class="course-meta">
+              <div class="meta-item">
+                <i class="far fa-clock"></i>
+                <span>16 horas</span>
+              </div>
+              <div class="meta-item">
+                <i class="far fa-calendar"></i>
+                <span>Martes y Jueves</span>
+              </div>
+              <div class="meta-item">
+                <i class="far fa-user"></i>
+                <span>15 cupos</span>
+              </div>
+            </div>
+            <div class="course-price">
+              <span class="price">Gratuito</span>
+              <span class="discount"></span>
+            </div>
+            <div class="course-details">
+              <h4>Lo que aprenderás:</h4>
+              <ul>
+                <li>Estado de resultados y balance general</li>
+                <li>Gestión de flujo de efectivo</li>
+                <li>Análisis de punto de equilibrio</li>
+                <li>Proyecciones financieras</li>
+              </ul>
+            </div>
+            <div class="course-actions">
+              <button class="btn btn-primary">Inscribirse</button>
+              <button class="btn btn-outline">Ver Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capacitación 3 -->
+        <div class="course-card" data-level="avanzado" data-modality="virtual" data-duration="largo" data-price="pago">
+          <div class="course-image">
+            <img src="ImagenesIndex/capacitacion3.jpg" alt="Marketing Digital">
+            <span class="course-badge virtual">Virtual</span>
+            <span class="course-level avanzado">Avanzado</span>
+          </div>
+          <div class="course-content">
+            <h3>Marketing Digital Estratégico</h3>
+            <p class="course-description">Estrategias avanzadas de marketing digital para escalar tu negocio.</p>
+            <div class="course-meta">
+              <div class="meta-item">
+                <i class="far fa-clock"></i>
+                <span>20 horas</span>
+              </div>
+              <div class="meta-item">
+                <i class="far fa-calendar"></i>
+                <span>Sábados</span>
+              </div>
+              <div class="meta-item">
+                <i class="far fa-user"></i>
+                <span>25 cupos</span>
+              </div>
+            </div>
+            <div class="course-price">
+              <span class="price">Gratuito</span>
+            </div>
+            <div class="course-details">
+              <h4>Lo que aprenderás:</h4>
+              <ul>
+                <li>SEO y SEM avanzado</li>
+                <li>Estrategias en redes sociales</li>
+                <li>Email marketing automatizado</li>
+                <li>Análisis de métricas y KPI's</li>
+              </ul>
+            </div>
+            <div class="course-actions">
+              <button class="btn btn-primary">Inscribirse</button>
+              <button class="btn btn-outline">Ver Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capacitación 4 -->
+        <div class="course-card" data-level="intermedio" data-modality="presencial" data-duration="corto" data-price="pago">
+          <div class="course-image">
+            <img src="ImagenesIndex/capacitacion4.jpg" alt="Pitch para Inversionistas">
+            <span class="course-badge presencial">Presencial</span>
+            <span class="course-level intermedio">Intermedio</span>
+          </div>
+          <div class="course-content">
+            <h3>Pitch para Inversionistas</h3>
+            <p class="course-description">Aprende a presentar tu proyecto de manera efectiva ante inversionistas.</p>
+            <div class="course-meta">
+              <div class="meta-item">
+                <i class="far fa-clock"></i>
+                <span>12 horas</span>
+              </div>
+              <div class="meta-item">
+                <i class="far fa-calendar"></i>
+                <span>Viernes</span>
+              </div>
+              <div class="meta-item">
+                <i class="far fa-user"></i>
+                <span>18 cupos</span>
+              </div>
+            </div>
+            <div class="course-price">
+              <span class="price">Gratuito</span>
+            </div>
+            <div class="course-details">
+              <h4>Lo que aprenderás:</h4>
+              <ul>
+                <li>Estructura de un pitch efectivo</li>
+                <li>Storytelling empresarial</li>
+                <li>Comunicación no verbal</li>
+                <li>Preparación para Q&A</li>
+              </ul>
+            </div>
+            <div class="course-actions">
+              <button class="btn btn-primary">Inscribirse</button>
+              <button class="btn btn-outline">Ver Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capacitación 5 -->
+        <div class="course-card" data-level="basico" data-modality="virtual" data-duration="medio" data-price="gratuito">
+          <div class="course-image">
+            <img src="ImagenesIndex/capacitacion5.jpg" alt="Legal para Startups">
+            <span class="course-badge virtual">Virtual</span>
+            <span class="course-level basico">Básico</span>
+          </div>
+          <div class="course-content">
+            <h3>Aspectos Legales para Startups</h3>
+            <p class="course-description">Conoce los aspectos legales fundamentales para proteger tu emprendimiento.</p>
+            <div class="course-meta">
+              <div class="meta-item">
+                <i class="far fa-clock"></i>
+                <span>10 horas</span>
+              </div>
+              <div class="meta-item">
+                <i class="far fa-calendar"></i>
+                <span>Miércoles</span>
+              </div>
+              <div class="meta-item">
+                <i class="far fa-user"></i>
+                <span>30 cupos</span>
+              </div>
+            </div>
+            <div class="course-price">
+              <span class="price">Gratuito</span>
+              <span class="original-price"></span>
+            </div>
+            <div class="course-details">
+              <h4>Lo que aprenderás:</h4>
+              <ul>
+                <li>Tipos de sociedades mercantiles</li>
+                <li>Propiedad intelectual</li>
+                <li>Contratos básicos</li>
+                <li>Obligaciones fiscales</li>
+              </ul>
+            </div>
+            <div class="course-actions">
+              <button class="btn btn-primary">Inscribirse</button>
+              <button class="btn btn-outline">Ver Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capacitación 6 -->
+        <div class="course-card" data-level="avanzado" data-modality="hibrido" data-duration="largo" data-price="pago">
+          <div class="course-image">
+            <img src="ImagenesIndex/capacitacion6.jpg" alt="Liderazgo Emprendedor">
+            <span class="course-badge hibrido">Híbrido</span>
+            <span class="course-level avanzado">Avanzado</span>
+          </div>
+          <div class="course-content">
+            <h3>Liderazgo y Gestión de Equipos</h3>
+            <p class="course-description">Desarrolla habilidades de liderazgo para gestionar equipos de alto rendimiento.</p>
+            <div class="course-meta">
+              <div class="meta-item">
+                <i class="far fa-clock"></i>
+                <span>24 horas</span>
+              </div>
+              <div class="meta-item">
+                <i class="far fa-calendar"></i>
+                <span>Sábados y Domingos</span>
+              </div>
+              <div class="meta-item">
+                <i class="far fa-user"></i>
+                <span>12 cupos</span>
+              </div>
+            </div>
+            <div class="course-price">
+              <span class="price">Gratuito</span>
+              <span class="discount"></span>
+            </div>
+            <div class="course-details">
+              <h4>Lo que aprenderás:</h4>
+              <ul>
+                <li>Estilos de liderazgo</li>
+                <li>Gestión del cambio</li>
+                <li>Motivación de equipos</li>
+                <li>Resolución de conflictos</li>
+              </ul>
+            </div>
+            <div class="course-actions">
+              <button class="btn btn-primary">Inscribirse</button>
+              <button class="btn btn-outline">Ver Detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paginación -->
+      <div class="pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn next">Siguiente <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <img src="ImagenesIndex/LogoUpa.png" class="footer-logo" alt="Logo UPA">
+                <p>Transformando ideas en negocios exitosos a través de la innovación y el emprendimiento.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index2.html">INICIO</a></li>
+                    <li><a href="capacitaciones.html">CAPACITACIONES</a></li>
+                    <li><a href="capacitaciones.html">EMPRESAS ALIADAS</a></li>
+                    <li><a href="index.html#about-us">SOBRE NOSOTROS</a></li>
+                    <li><a href="index.html#contact">LOGIN</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Universidad 123, Ciudad</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@hubemprendimiento.edu</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hub de Emprendimiento e Innovación. Todos los derechos reservados.</p>
+        </div>
+    </div>
+  </footer>
+
+  <script src="Js/capacitaciones.js"></script>
+</body>
+</html>
