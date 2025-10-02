@@ -1,0 +1,684 @@
+/* Header Específico para Contáctanos */
+#main-header {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.85)), url('../ImagenesIndex/Img3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 60vh;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#main-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    z-index: 100;
+}
+
+.nav-list a.active {
+    color: var(--secondary);
+}
+
+.nav-list a.active::after {
+    width: 100%;
+}
+
+.header-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+/* Sección de Información de Contacto */
+.contact-info {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-tag {
+    color: var(--secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: var(--medium-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.info-cards {
+    display: grid;
+    gap: 25px;
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background: var(--light-gray);
+    border-radius: 10px;
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+}
+
+.info-card:hover {
+    transform: translateX(10px);
+    border-left-color: var(--secondary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-icon i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.info-content h4 {
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.info-content p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Mapa de Google - Diseño Mejorado */
+.map-section {
+    height: 100%;
+}
+
+.map-container {
+    position: relative;
+    background: var(--light-gray);
+    border-radius: 15px;
+    overflow: hidden;
+    height: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.map-container:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+#googleMap {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: filter 0.3s ease;
+}
+
+.map-container:hover #googleMap {
+    filter: brightness(1.02);
+}
+
+/* Controles del mapa mejorados */
+.map-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.map-control-btn {
+    background: white;
+    border: 2px solid #dee2e6;
+    padding: 12px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    color: #495057;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.map-control-btn:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.map-control-btn:active {
+    transform: scale(0.95);
+}
+
+.map-control-btn.active {
+    background: var(--secondary);
+    color: var(--white);
+    border-color: var(--secondary);
+}
+
+.directions-btn {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.directions-btn:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+/* Estilos mejorados para el mapa de Google */
+.gm-style {
+    font-family: "DM Sans", sans-serif !important;
+}
+
+.gm-style-iw {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.gm-style-iw-d {
+    overflow: auto !important;
+    padding: 0 !important;
+    max-height: none !important;
+}
+
+.custom-info-window {
+    min-width: 280px;
+}
+
+.custom-info-window h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.custom-info-window p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.custom-info-window a {
+    display: inline-block;
+    background: var(--secondary);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.custom-info-window a:hover {
+    background: #8a1c38;
+}
+
+/* Animaciones para el marcador */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-marker {
+    animation: pulse 2s infinite;
+}
+
+/* Sección de Formulario */
+.contact-form-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--light-gray) 0%, #f8f9fa 100%);
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h2 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: var(--medium-gray);
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 2px solid var(--light-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: var(--white);
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    padding: 15px 15px 15px 45px;
+}
+
+.form-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--medium-gray);
+    transition: var(--transition);
+}
+
+.form-group textarea + i {
+    top: 25px;
+    transform: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(159, 34, 65, 0.1);
+}
+
+.form-group input:focus + i,
+.form-group select:focus + i,
+.form-group textarea:focus + i {
+    color: var(--secondary);
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.form-actions .btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Sección de Preguntas Frecuentes */
+.faq-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin: 10px 0 15px;
+}
+
+.faq-header p {
+    color: var(--medium-gray);
+    font-size: 1.1rem;
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border: 2px solid var(--light-gray);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    border-color: var(--secondary);
+}
+
+.faq-question {
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    background: var(--light-gray);
+}
+
+.faq-question h4 {
+    color: var(--primary);
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.faq-question i {
+    color: var(--secondary);
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 25px 25px;
+    max-height: 200px;
+}
+
+.faq-answer p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Mensajes de error */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Notificaciones */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    animation: slideIn 0.3s ease;
+}
+
+.notification.success {
+    background: #27ae60;
+    color: white;
+}
+
+.notification.error {
+    background: #e74c3c;
+    color: white;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animaciones */
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .contact-grid {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .map-container {
+        height: 400px;
+    }
+    
+    .map-controls {
+        position: relative;
+        top: auto;
+        right: auto;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        gap: 8px;
+    }
+    
+    .map-control-btn {
+        font-size: 0.8rem;
+        padding: 10px 12px;
+    }
+    
+    .form-container {
+        padding: 30px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+    
+    /* Menú móvil */
+    .nav-list.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-info,
+    .contact-form-section,
+    .faq-section {
+        padding: 60px 0;
+    }
+    
+    .form-container {
+        padding: 20px;
+        margin: 0 15px;
+    }
+    
+    .info-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .info-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .faq-question {
+        padding: 20px;
+    }
+    
+    .faq-question h4 {
+        font-size: 1rem;
+    }
+    
+    .contact-header h2,
+    .form-header h2,
+    .faq-header h2 {
+        font-size: 2rem;
+    }
+    
+    .map-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .map-control-btn {
+        width: 200px;
+        justify-content: center;
+    }
+    
+    .notification {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}
