@@ -37,7 +37,7 @@
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    padding-top: 240px; /*Cambiamos la posicion del texto del header*/
+    padding-top: 210px; /*Cambiamos la posicion del texto del header*/
 }
 
 /* =============================== */
@@ -921,4 +921,5 @@ body.no-scroll {
         opacity: 1; 
         transform: translateY(0); 
     }
+
 }
